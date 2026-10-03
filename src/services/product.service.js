@@ -1,7 +1,19 @@
 import http from "./http";
+
 export const productService = {
-  list: () => http.get("/products"),
-  create: (d) => http.post("/products", d),
-  update: (id, d) => http.patch(`/products/${id}`, d),
-  remove: (id) => http.delete(`/products/${id}`),
+  list: () => http.get("/products/get-products"),
+
+  create: (data) =>
+    http.post("/products/create-product", data),
+
+  update: (id, data) =>
+    http.patch(`/products/update-product/${id}`, data),
+
+  remove: (id) =>
+    http.delete(`/products/delete-product/${id}`),
+
+  profitReport: (params = {}) =>
+    http.get("/bills/get-profit-report", {
+      params,
+    }),
 };
