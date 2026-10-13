@@ -25,6 +25,7 @@ const agencyLinks = [
   ["/stores", "Stores", Store],
   ["/stock", "Stock", Boxes],
   ["/users", "Users", Users],
+  ["/gst-settings", "GST Settings", FileText],
 ];
 
 const masterLinks = [

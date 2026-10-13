@@ -12,6 +12,7 @@ import StoresPage from "../pages/stores/StoresPage";
 import UsersPage from "../pages/users/UsersPage";
 import StockPage from "../pages/stock/StockPage";
 import BillingPage from "../pages/billing/BillingPage";
+import GstSettingPage from "../components/settings/GstSettingPage";
 import OptionalBillingPage from "../pages/billing/OptionalBillingPage";
 export default function App() {
   return (
@@ -58,6 +59,7 @@ function AppRoutes() {
           <Route path="/stores" element={<StoresPage />} />
           <Route path="/stock" element={<StockPage />} />
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/gst-settings" element={<GstSettingPage />} />
         </>
       )}
       <Route path="*" element={<Navigate to="/" replace />} />
